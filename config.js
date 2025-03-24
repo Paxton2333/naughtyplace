@@ -1,0 +1,12 @@
+export const CONFIG = {
+    MAX_NAUGHTINESS: 1000,
+    NAUGHTY_INCREMENT: 100,
+    MAIN_COLOR: "#ff8800",
+    WARNING_MESSAGES: [
+        "WARNING: 1337 H4X0R DETECTED!",
+        "YOUR IP HAS BEEN LOGGED",
+        "VIRUS ALERT!!!",
+        "SYSTEM COMPROMISED",
+        "YOU WOULDN'T DOWNLOAD A CAR"
+    ]
+};

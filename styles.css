@@ -1,0 +1,133 @@
+body {
+    background: #000000;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+.main-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    background: #212121;
+    padding: 1rem;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 0;
+    background: #ff8800;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-shadow: none;
+    -webkit-text-stroke: 0;
+}
+
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    background: #333333;
+    color: #ff8800;
+    font-size: 0.9rem;
+    padding: 0.3rem;
+    animation: none;
+}
+
+.marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+.nav-bar {
+    background: #212121;
+    padding: 1rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.video-thumb {
+    position: relative;
+    aspect-ratio: 16/9;
+    background: #333;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.video-thumb:hover {
+    transform: scale(1.03);
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.video-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.video-modal video {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.nav-link.active {
+    color: #ff8800;
+    text-decoration: underline;
+}
